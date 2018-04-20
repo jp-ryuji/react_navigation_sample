@@ -1,9 +1,20 @@
 import React from 'react';
-import { Button, View, Text } from 'react-native';
+import { Button, Image , View, Text } from 'react-native';
+
+class LogoTitle extends React.Component {
+  render() {
+    return (
+      <Image
+        source={require('../assets/images/spiro.png')}
+        style={{ width: 30, height: 30 }}
+      />
+    );
+  }
+}
 
 export default class HomeScreen extends React.Component {
   static navigationOptions = {
-    title: 'Home',
+    headerTitle: <LogoTitle />,
   };
 
   render() {
