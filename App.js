@@ -12,7 +12,13 @@ class HomeScreen extends React.Component {
   }
 }
 
-export default StackNavigator({
+export default class App extends React.Component {
+  render() {
+    return <RootStack />;
+  }
+}
+
+const RootStack = StackNavigator({
   Home: {
     screen: HomeScreen,
   },
