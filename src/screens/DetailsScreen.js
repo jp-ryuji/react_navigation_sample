@@ -2,8 +2,15 @@ import React from 'react';
 import { Button, View, Text } from 'react-native';
 
 export default class DetailsScreen extends React.Component {
-  static navigationOptions = {
-    title: 'Details',
+  // NOTE: Make navigationOptions function to access navigation.state (this.props.navigation.state).
+  //   The arguments are navigation, screenProps and navigationOptions.
+  //   See: https://reactnavigation.org/docs/headers.html
+  static navigationOptions = ({ navigation }) => {
+    const { params } = navigation.state;
+
+    return {
+      title: params ? params.otherParam: 'A Nested Details Screen',
+    }
   };
 
   render() {
