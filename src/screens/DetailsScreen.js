@@ -2,6 +2,10 @@ import React from 'react';
 import { Button, View, Text } from 'react-native';
 
 export default class DetailsScreen extends React.Component {
+  static navigationOptions = {
+    title: 'Details',
+  };
+
   render() {
     /* NOTE: Read the params from the navigation state */
     const { params } = this.props.navigation.state;
