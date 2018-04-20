@@ -13,7 +13,7 @@ export default class App extends React.Component {
 const RootStack = StackNavigator(
   {
     Home: {
-      screen: HomeScreen,
+      screen: HomeScreen, // This is a screen component
     },
     Details: {
       screen: DetailsScreen,
