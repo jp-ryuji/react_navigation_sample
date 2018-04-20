@@ -4,6 +4,13 @@ import { Button, View, Text } from 'react-native';
 export default class HomeScreen extends React.Component {
   static navigationOptions = {
     title: 'Home',
+    headerStyle: {
+      backgroundColor: '#f4511e',
+    },
+    headerTintColor: '#fff',
+    headerTitleStyle: {
+      fontWeight: 'bold',
+    },
   };
 
   render() {
