@@ -3,6 +3,7 @@ import { View, Text } from 'react-native';
 import { StackNavigator } from 'react-navigation';
 import HomeScreen from './src/screens/HomeScreen';
 import DetailsScreen from './src/screens/DetailsScreen';
+import ModalScreen from './src/screens/ModalScreen';
 
 export default class App extends React.Component {
   render() {
@@ -10,7 +11,7 @@ export default class App extends React.Component {
   }
 }
 
-const RootStack = StackNavigator(
+const MainStack = StackNavigator(
   {
     Home: {
       screen: HomeScreen, // This is a screen component
@@ -31,5 +32,21 @@ const RootStack = StackNavigator(
         fontWeight: 'bold',
       },
     },
+  }
+);
+
+const RootStack = StackNavigator(
+  {
+    Main: {
+      screen: MainStack,
+    },
+    MyModal: {
+      screen: ModalScreen,
+    },
+  },
+  {
+    // NOTE: mode can be either card (default) or modal.
+    mode: 'modal',
+    headerMode: 'none',
   }
 );
