@@ -21,5 +21,15 @@ const RootStack = StackNavigator(
   },
   {
     initialRouteName: 'Home',
+    /* The navigation wide style settings */
+    navigationOptions: {
+      headerStyle: {
+        backgroundColor: '#f4511e',
+      },
+      headerTintColor: '#fff',
+      headerTitleStyle: {
+        fontWeight: 'bold',
+      },
+    },
   }
 );
