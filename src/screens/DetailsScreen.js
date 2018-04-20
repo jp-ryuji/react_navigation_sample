@@ -24,6 +24,11 @@ export default class DetailsScreen extends React.Component {
         <Text>Details Screen</Text>
         <Text>itemId: {JSON.stringify(itemId)}</Text>
         <Text>otherParam: {JSON.stringify(otherParam)}</Text>
+        { /* Update navigationOptions with setParams */ }
+        <Button
+          title="Update the title"
+          onPress={() => this.props.navigation.setParams({otherParam: 'Updated!'})}
+        />
         <Button
           title="Go back"
           onPress={() => this.props.navigation.goBack()}
